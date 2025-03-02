@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* 배경색 */
+    color: black; /* 글자색 */
+    text-align: center;
+}
+
+/* 헤더 스타일 */
+header {
+    position: fixed;  /* 화면 최상단 고정 */
+    top: 20px;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center; /* 세로 정렬 */
+    justify-content: center; /* 로고를 중앙 정렬 */
+    z-index: 1000; /* 다른 요소보다 위 */
+}
+
+/* 로고 스타일 */
+header h1 {
+    font-family: 'Rock Salt', cursive; /* 강한 붓터치 스타일 */
+    font-size: 55px; /* 크기 조정 */
+    letter-spacing: 2px; /* 글자 간격 */
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* 정확히 중앙 정렬 */
+}
+
+/* 네비게이션 스타일 */
+nav {
+    position: absolute;
+    left: 40px; /* 왼쪽 끝으로 이동 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* 가로 정렬 */
+}
+
+nav ul li {
+    margin-right: 15px; /* 메뉴 간격 */
+}
+
+nav a {
+    font-family: 'Noto Sans', sans-serif; /* 단정한 폰트 */
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 본문이 헤더에 가려지지 않도록 여백 추가 */
+body {
+    padding-top: 60px;
+}
+
+section {
+    
+    margin: 50px 0;
+}
+
+footer {
+    background-color: #222;
+    padding: 10px;
+    font-size: 14px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4열로 정렬 */
+    gap: 20px; /* 사진 간격 */
+    padding: 40px;
+    justify-content: center;
+}
+
+.product {
+    width: 100%;
+    overflow: hidden; /* 내부 이미지가 부모 영역을 벗어나지 않도록 함 */
+    border-radius: 10px; /* 부모 요소에도 둥근 모서리 적용 */
+}
+
+
+.product img {
+    width: 100%;
+    aspect-ratio: 1 / 1.2; /*가로세로 비율*/
+    object-fit: cover; /* 넘치는 부분을 잘라서 비율 맞춤 */
+    border-radius: 10px; /* 모서리를 살짝 둥글게 */
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img:hover {
+    transform: scale(1.05); /* 마우스 올리면 살짝 확대 */
+}
+
